@@ -1,6 +1,8 @@
+-- Crear la base de datos
 CREATE DATABASE IF NOT EXISTS Prueba;
 USE Prueba;
 
+-- Crear las tablas
 CREATE TABLE IF NOT EXISTS Customers (
     CustomerID INT AUTO_INCREMENT PRIMARY KEY,
     CustomerName VARCHAR(100)
@@ -25,6 +27,7 @@ CREATE TABLE IF NOT EXISTS Products (
     ProductName VARCHAR(100)
 );
 
+-- Insertar datos
 INSERT INTO Customers (CustomerName) VALUES 
 ('Empresa 1'),
 ('Empresa 2'),
