@@ -30,3 +30,4 @@ RIGHT JOIN Orders AS o ON c.CustomerID = o.CustomerID;
 SELECT e1.Name AS EmployeeName, e2.Name AS ManagerName
 FROM Employees AS e1
 CROSS JOIN Employees AS e2;
+
