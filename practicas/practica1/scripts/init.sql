@@ -19,19 +19,20 @@ CREATE TABLE IF NOT EXISTS Estudiantes (
     FOREIGN KEY (GradoID) REFERENCES Grados(GradoID)
 );
 
--- Crear la tabla de Profesores
-CREATE TABLE IF NOT EXISTS Profesores (
-    ProfesorID INT AUTO_INCREMENT PRIMARY KEY,
-    Nombre VARCHAR(50),
-    Apellido VARCHAR(50),
-    MateriaID INT
-);
-
 -- Crear la tabla de Materias
 CREATE TABLE IF NOT EXISTS Materias (
     MateriaID INT AUTO_INCREMENT PRIMARY KEY,
     Nombre VARCHAR(100),
     Descripcion TEXT
+);
+
+-- Crear la tabla de Profesores
+CREATE TABLE IF NOT EXISTS Profesores (
+    ProfesorID INT AUTO_INCREMENT PRIMARY KEY,
+    Nombre VARCHAR(50),
+    Apellido VARCHAR(50),
+    MateriaID INT,
+    FOREIGN KEY (MateriaID) REFERENCES Materias(MateriaID)
 );
 
 -- Crear la tabla de Inscripciones
@@ -52,7 +53,6 @@ CREATE TABLE IF NOT EXISTS Notas (
     FOREIGN KEY (EstudianteID) REFERENCES Estudiantes(EstudianteID),
     FOREIGN KEY (MateriaID) REFERENCES Materias(MateriaID)
 );
-
 
 -- Insertar datos en la tabla de Grados
 INSERT INTO Grados (Nivel) VALUES
@@ -90,6 +90,19 @@ INSERT INTO Estudiantes (Nombre, Apellido, GradoID) VALUES
 ('Teresa', 'Prieto', 9),
 ('Manuel', 'Vega', 10);
 
+-- Insertar datos en la tabla de Materias
+INSERT INTO Materias (Nombre, Descripcion) VALUES
+('Matemáticas', 'Estudio de las propiedades y las relaciones de los números y los símbolos.'),
+('Lengua', 'Estudio del idioma español, gramática y literatura.'),
+('Ciencias', 'Estudio de las ciencias naturales y biológicas.'),
+('Historia', 'Estudio de los hechos pasados de la humanidad.'),
+('Geografía', 'Estudio de la tierra y sus características.'),
+('Inglés', 'Estudio del idioma inglés.'),
+('Educación Física', 'Actividades deportivas y conocimiento del cuerpo humano.'),
+('Arte', 'Estudio de la historia del arte y prácticas artísticas.'),
+('Música', 'Estudio teórico y práctico de la música.'),
+('Tecnología', 'Estudio de la tecnología y su aplicación.');
+
 -- Insertar datos en la tabla de Profesores
 INSERT INTO Profesores (Nombre, Apellido, MateriaID) VALUES
 ('Roberto', 'Jiménez', 1),
@@ -112,20 +125,6 @@ INSERT INTO Profesores (Nombre, Apellido, MateriaID) VALUES
 ('Lucía', 'Álvarez', 8),
 ('Diego', 'Fernández', 9),
 ('Paula', 'Torres', 10);
-
--- Insertar datos en la tabla de Materias
-INSERT INTO Materias (Nombre, Descripcion) VALUES
-('Matemáticas', 'Estudio de las propiedades y las relaciones de los números y los símbolos.'),
-('Lengua', 'Estudio del idioma español, gramática y literatura.'),
-('Ciencias', 'Estudio de las ciencias naturales y biológicas.'),
-('Historia', 'Estudio de los hechos pasados de la humanidad.'),
-('Geografía', 'Estudio de la tierra y sus características.'),
-('Inglés', 'Estudio del idioma inglés.'),
-('Educación Física', 'Actividades deportivas y conocimiento del cuerpo humano.'),
-('Arte', 'Estudio de la historia del arte y prácticas artísticas.'),
-('Música', 'Estudio teórico y práctico de la música.'),
-('Tecnología', 'Estudio de la tecnología y su aplicación.');
-
 
 -- Insertar datos en la tabla de Inscripciones
 INSERT INTO Inscripciones (EstudianteID, MateriaID) VALUES
