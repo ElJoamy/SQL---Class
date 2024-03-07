@@ -15,6 +15,7 @@ Para entender un poco aca esta el `modelo ER` de la base de datos que vamos a us
 
 ![Modelo ER](/practicas/practica1/imgs/escuelaER.png)
 
+## REALIZAR LOS SIGUIENTES EJERCICIOS:
 ### 2 INNER JOIN
 
 **Ejercicio 1:**
