@@ -11,6 +11,10 @@ Antes de empezar, necesitamos crear la base de datos, las tablas y los datos de 
 ```
 
 ## SQL JOINs 🤝
+Para entender un poco aca esta el `modelo ER` de la base de datos que vamos a usar:
+
+![Modelo ER](/practicas/practica1/imgs/escuelaER.png)
+
 ### 2 INNER JOIN
 
 **Ejercicio 1:**
