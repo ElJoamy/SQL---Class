@@ -1,4 +1,15 @@
-# Práctica 1: Consultas SQL
+# Práctica 1: Consultas SQL 
+Antes de empezar, necesitamos crear la base de datos, las tablas y los datos de ejemplo. 🚀
+
+- Para ello puedes copiar el siguiente script y pegarlo en tu consola de MySQL para crear la base de datos, las tablas y los datos de ejemplo desde el siguiente archivo 📄 [init.sql](/practicas/practica1/scripts/init.sql)
+
+- Debes llenar las respuestas en este README.md y en el siguiente archivo 📄 [queries.sql](/practicas/practica1/scripts/queries.sql)
+
+- En este archivo debes poner los queries entre el campo que dice:
+```sql
+-- Respuesta
+```
+
 ## SQL JOINs 🤝
 ### 2 INNER JOIN
 
@@ -6,14 +17,14 @@
 Encuentra los nombres de los estudiantes y las materias en las que están inscritos.
 
 ```sql
-
+-- Respuesta
 ```
 
 **Ejercicio 2:**
 Encuentra los nombres de los profesores y las materias que enseñan.
 
 ```sql
-
+-- Respuesta
 ```
 
 ### 2 LEFT JOIN
@@ -22,14 +33,14 @@ Encuentra los nombres de los profesores y las materias que enseñan.
 Lista todos los estudiantes y sus notas en Matemáticas, incluidos aquellos que no están inscritos en Matemáticas.
 
 ```sql
-
+-- Respuesta
 ```
 
 **Ejercicio 2:**
 Lista todos los estudiantes y las materias a las que no están inscritos.
 
 ```sql
-
+-- Respuesta
 ```
 
 ### 2 RIGHT JOIN
@@ -40,14 +51,14 @@ Dado que MySQL no implementa `RIGHT JOIN` de manera que sea directamente inverti
 Listar todas las materias junto con los estudiantes inscritos, incluyendo materias sin estudiantes.
 
 ```sql
-
+-- Respuesta
 ```
 
 **Ejercicio 2:**
 Listar todos los profesores junto con las materias que enseñan, incluso si no tienen una materia asignada.
 
 ```sql
-
+-- Respuesta
 ```
 
 ### 1 FULL JOIN
@@ -58,7 +69,7 @@ Lista todos los estudiantes y todas las materias, mostrando quién está inscrit
 Dado que MySQL no soporta `FULL JOIN` directamente, simulamos este comportamiento:
 
 ```sql
-
+-- Respuesta
 ```
 
 ### 1 CROSS JOIN
@@ -67,7 +78,7 @@ Dado que MySQL no soporta `FULL JOIN` directamente, simulamos este comportamient
 Genera una lista de todas las posibles combinaciones de estudiantes y profesores.
 
 ```sql
-
+-- Respuesta
 ```
 
 ### 1 SELF JOIN
@@ -76,6 +87,5 @@ Genera una lista de todas las posibles combinaciones de estudiantes y profesores
 Encuentra pares de estudiantes que compartan el mismo grado.
 
 ```sql
-
+-- Respuesta
 ```
-
