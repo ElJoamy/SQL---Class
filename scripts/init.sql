@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS Orders (
 
 CREATE TABLE IF NOT EXISTS Employees (
     EmployeeID INT AUTO_INCREMENT PRIMARY KEY,
-    Name VARCHAR(100),
+    Name VARCHAR(100), 
     ManagerID INT,
     FOREIGN KEY (ManagerID) REFERENCES Employees(EmployeeID)
 );
